@@ -12,8 +12,6 @@
 
 #include "WiFiManager.h"
 
-#if defined(ESP8266) || defined(ESP32)
-
 #ifdef ESP32
 uint8_t WiFiManager::_lastconxresulttmp = WL_IDLE_STATUS;
 #endif
