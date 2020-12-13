@@ -637,5 +637,3 @@ class WiFiManager
 };
 
 #endif
-
-#endif
