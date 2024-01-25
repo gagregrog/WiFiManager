@@ -1,3 +1,7 @@
+# Hey You, Read This!
+
+This fork of WiFiManager uses a clone of ESP8266WebServer that defines `HTTPMethod` enum members with a double underscore prefix in order to avoid complications when WiFiManager is used alongside ESPAsyncWebServer, which defines the same members.
+
 
 # WiFiManager
 

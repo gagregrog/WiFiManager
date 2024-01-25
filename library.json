@@ -20,6 +20,9 @@
     "type": "git",
     "url": "https://github.com/tzapu/WiFiManager.git"
   },
+  "dependencies": {
+    "ESP8266WebServer": "https://github.com/gagregrog/ESP8266WebServer.git"
+  },
   "frameworks": "arduino",
   "platforms": 
   [
