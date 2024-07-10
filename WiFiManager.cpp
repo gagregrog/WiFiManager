@@ -2066,7 +2066,7 @@ void WiFiManager::handleWifiSave()
 {
 #ifdef WM_DEBUG_LEVEL
   DEBUG_WM(DEBUG_VERBOSE, F("<- HTTP WiFi save "));
-  DEBUG_WM(DEBUG_DEV, F("Method:"), server->method() == __HTTP_GET ? (String)FPSTR(S_GET) : (String)FPSTR(S_POST));
+  DEBUG_WM(DEBUG_DEV, F("Method:"), server->method() == HTTP_GET ? (String)FPSTR(S_GET) : (String)FPSTR(S_POST));
 #endif
   handleRequest();
 
@@ -2151,7 +2151,7 @@ void WiFiManager::handleParamSave()
   DEBUG_WM(DEBUG_VERBOSE, F("<- HTTP Param save "));
 #endif
 #ifdef WM_DEBUG_LEVEL
-  DEBUG_WM(DEBUG_DEV, F("Method:"), server->method() == __HTTP_GET ? (String)FPSTR(S_GET) : (String)FPSTR(S_POST));
+  DEBUG_WM(DEBUG_DEV, F("Method:"), server->method() == HTTP_GET ? (String)FPSTR(S_GET) : (String)FPSTR(S_POST));
 #endif
   handleRequest();
 
@@ -2729,7 +2729,7 @@ void WiFiManager::handleNotFound()
   message += FPSTR(S_uri);            // @token uri
   message += server->uri();
   message += FPSTR(S_method); // @token method
-  message += (server->method() == __HTTP_GET) ? FPSTR(S_GET) : FPSTR(S_POST);
+  message += (server->method() == HTTP_GET) ? FPSTR(S_GET) : FPSTR(S_POST);
   message += FPSTR(S_args); // @token args
   message += server->args();
   message += F("\n");
