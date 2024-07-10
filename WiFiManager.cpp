@@ -749,7 +749,7 @@ void WiFiManager::setupHTTPServer()
   server->onNotFound(std::bind(&WiFiManager::handleNotFound, this));
 
   server->on(WM_G(R_update), std::bind(&WiFiManager::handleUpdate, this));
-  server->on(WM_G(R_updatedone), __HTTP_POST, std::bind(&WiFiManager::handleUpdateDone, this), std::bind(&WiFiManager::handleUpdating, this));
+  server->on(WM_G(R_updatedone), HTTP_POST, std::bind(&WiFiManager::handleUpdateDone, this), std::bind(&WiFiManager::handleUpdating, this));
 
   server->begin(); // Web server start
 #ifdef WM_DEBUG_LEVEL
